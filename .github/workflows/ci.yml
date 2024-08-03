@@ -1,21 +1,35 @@
+# Name des Workflows
 name: Node.js CI
 
+# Auslöser für den Workflow
 on:
+    # Workflow wird bei Push-Events auf dem main-Branch ausgeführt
     push:
         branches: [main]
+    # Workflow wird bei Pull-Request-Events auf dem main-Branch ausgeführt
     pull_request:
         branches: [main]
 
+# Definition der Jobs im Workflow
 jobs:
+    # Name des Jobs
     build:
+        # Der Job läuft auf der neuesten Ubuntu-Version
         runs-on: ubuntu-latest
 
+        # Schritte, die im Job ausgeführt werden
         steps:
+            # Checkt das Repository in den Runner ein
             - uses: actions/checkout@v3
+            # Verwendet Node.js
             - name: Use Node.js
               uses: actions/setup-node@v3
               with:
+                  # Spezifiziert die Node.js-Version
                   node-version: '20'
+            # Gibt die Node.js-Version aus
             - run: node -v # Ausgabe der Node.js Version
+            # Installiert die npm-Abhängigkeiten
             - run: npm install
+            # Führt die npm-Tests aus
             - run: npm test

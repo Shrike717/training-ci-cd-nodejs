@@ -19,4 +19,3 @@ jobs:
             - run: node -v # Ausgabe der Node.js Version
             - run: npm install
             - run: npm test
-            - run: npm run build

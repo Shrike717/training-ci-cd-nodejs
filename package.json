@@ -1,0 +1,28 @@
+{
+	"name": "mein-projekt",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node app.js",
+		"test": "jest"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/benutzername/mein-projekt.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/benutzername/mein-projekt/issues"
+	},
+	"homepage": "https://github.com/benutzername/mein-projekt#readme",
+	"dependencies": {
+		"express": "^4.19.2",
+		"supertest": "^7.0.0"
+	},
+	"devDependencies": {
+		"jest": "^29.7.0"
+	}
+}
